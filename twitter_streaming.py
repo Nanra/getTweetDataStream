@@ -7,13 +7,13 @@ from tweepy import Stream
 access_token = "Enter your acces token"
 access_token_secret = "Enter your token secret"
 consumer_key = "Enter your consumer key"
-consumer_secret = "Enter your consumer secret"
+consumer_secret = "Enter Your consumer secret"
 
 
 # This is a basic listener that just prints received tweets to stdout.
 class StdOutListener(StreamListener):
     def on_data(self, data):
-        print data
+        print dataxQzmLV9SWrXYQJORUWvDH6AB60mpTvGY48VVm55GK8s3SP5lRc
         return True
 
     def on_error(self, status):
