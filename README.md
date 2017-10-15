@@ -1,2 +1,2 @@
 # getTweetDataStream
-Trying to Data Mining from Twitter using Tweepy
+Trying to Mining Data from Twitter using Tweepy
