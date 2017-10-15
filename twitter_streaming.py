@@ -1,18 +1,17 @@
-#Import the necessary methods from tweepy library
+# Import the necessary methods from tweepy library
 from tweepy.streaming import StreamListener
 from tweepy import OAuthHandler
 from tweepy import Stream
 
-#Variables that contains the user credentials to access Twitter API
-access_token = "151969580-1pY75HNLMl351Bhn4Ha2SCKQWT1fwWrd58PNBMi2"
-access_token_secret = "Og26gvOnG4YFLjXdWx2uqIofkfustGvzy8Vs0OEYYoN16"
-consumer_key = "d3mXwAOGE8VeXXNjtHxV7PmXf"
-consumer_secret = "xQzmLV9SWrXYQJORUWvDH6AB60mpTvGY48VVm55GK8s3SP5lRc"
+# Variables that contains the user credentials to access Twitter API
+access_token = "Enter your acces token"
+access_token_secret = "Enter your token secret"
+consumer_key = "Enter your consumer key"
+consumer_secret = "Enter your consumer secret"
 
 
-#This is a basic listener that just prints received tweets to stdout.
+# This is a basic listener that just prints received tweets to stdout.
 class StdOutListener(StreamListener):
-
     def on_data(self, data):
         print data
         return True
@@ -22,12 +21,11 @@ class StdOutListener(StreamListener):
 
 
 if __name__ == '__main__':
-
-    #This handles Twitter authetification and the connection to Twitter Streaming API
+    # This handles Twitter authentification and the connection to Twitter Streaming API
     l = StdOutListener()
     auth = OAuthHandler(consumer_key, consumer_secret)
     auth.set_access_token(access_token, access_token_secret)
     stream = Stream(auth, l)
 
-    #This line filter Twitter Streams to capture data by the keywords: 'python', 'javascript', 'ruby'
+    # This line filter Twitter Streams to capture data by the keywords: 'python', 'javascript', 'ruby'
     stream.filter(track=['python', 'javascript', 'ruby'])
