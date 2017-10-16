@@ -28,4 +28,4 @@ if __name__ == '__main__':
     stream = Stream(auth, l)
 
     # This line filter Twitter Streams to capture data by the keywords: 'python', 'javascript', 'ruby'
-    stream.filter(track=['python', 'ruby', 'javascript'])
+    stream.filter(track=['ridwan', 'kamil', 'dedi', 'mulyadi', 'dedy', 'mizwar', 'pilkada', 'jabar'])
