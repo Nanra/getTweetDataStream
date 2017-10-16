@@ -4,16 +4,16 @@ from tweepy import OAuthHandler
 from tweepy import Stream
 
 # Variables that contains the user credentials to access Twitter API
-access_token = "151969580-1pY75HNLMl351Bhn4Ha2SCKQWT1fwWrd58PNBMi2"
-access_token_secret = "Og26gvOnG4YFLjXdWx2uqIofkfustGvzy8Vs0OEYYoN16"
-consumer_key = "lELqXbGLDe6TXENqr2uHsl8RT"
-consumer_secret = "QvBgFj6ViORKnbpYjrl81Eve2Qg9zlMvjjGFCmlX7Z3ea9fYpK"
+access_token = "151969580-z800m24tNl2KcVvbeZU7RRLWjBxZgj8rppSLYyx5"
+access_token_secret = "JVtPz9X3ImJWgzslHHXZV6qs0wTS6gg00v28IzKMwTGSm"
+consumer_key = "SeNhgUMbQSyF3OzTgGsUVbNar"
+consumer_secret = "	LjFAIYwFyXrKycPSgPnzeafRHNe6SXj8VhP4GDTLcUwLmTrVzU"
 
 
 # This is a basic listener that just prints received tweets to stdout.
 class StdOutListener(StreamListener):
     def on_data(self, data):
-        print dataxQzmLV9SWrXYQJORUWvDH6AB60mpTvGY48VVm55GK8s3SP5lRc
+        print data
         return True
 
     def on_error(self, status):
@@ -28,4 +28,4 @@ if __name__ == '__main__':
     stream = Stream(auth, l)
 
     # This line filter Twitter Streams to capture data by the keywords: 'python', 'javascript', 'ruby'
-    stream.filter(track=['ridwan kamil', 'dedi mulyadi', 'dedy mizwar'])
+    stream.filter(track=['python', 'ruby', 'javascript'])
