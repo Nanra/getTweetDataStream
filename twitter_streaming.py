@@ -22,7 +22,6 @@ class StdOutListener(StreamListener):
     def on_error(self, status):
         print status
 
-
 if __name__ == '__main__':
     # This handles Twitter authentification and the connection to Twitter Streaming API
     lines = StdOutListener()
